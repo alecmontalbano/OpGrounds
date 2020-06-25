@@ -21978,6 +21978,14 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
   }
 }
 
+.is-muted {
+  color: #b5b5b5 !important;
+}
+
+a.is-muted:hover {
+  color: #7a7a7a !important;
+}
+
 .dropdown {
   position: relative;
 }
