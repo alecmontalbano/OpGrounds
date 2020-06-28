@@ -9,63 +9,27 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @yield('styles')
+
 </head>
 <body>
+    
+    @include('_includes.nav.main')
+
     <div id="app">
-        <nav class="navbar has-shadow">
-            <div class="container">
-                <div class="navbar-brand">
-                    <a class="navbar-item" href="{{route('home')}}">
-                        <img src="{{asset('images/Cube_NH.png')}}" alt="OpGrounds Logo">
-                    </a>
-                </div>
-                <div class="navbar-start">
-                    <a href="" class="navbar-item is-tab is-hidden-mobile m-l-10">Learn</a>
-                    <a href="" class="navbar-item is-tab is-hidden-mobile">Discuss</a>
-                    <a href="" class="navbar-item is-tab is-hidden-mobile">Share</a>
-                </div>
-
-                <div class="navbar-end">   
-                    @if (Auth::guest())
-                        <a href="{{route('login')}}" class="navbar-item is-tab">Login</a>
-                        <a href="{{route('register')}}" class="navbar-item is-tab">Join the Community</a>
-                    @else
-                        <button class="dropdown navbar-item is-tab is-aligned-right">
-                            Hey, Alec <span class="icon"><i class="fa fa-caret-down"></i></span>
-
-                            <ul class="dropdown-menu">
-                                <li><a href="">
-                                    <span class="icon"><i class="fa fa-fw m-r-10 fa-user-circle-o"></i></span>
-                                    Profile</a></li>
-                                <li><a href="">
-                                    <span class="icon"><i class="fa fa-fw m-r-10 fa-bell"></i></span>
-                                    Notifications</a></li>
-                                <li><a href="">
-                                    <span class="icon"><i class="fa fa-fw m-r-10 fa-cog"></i></span>
-                                    Settings</a></li>
-                                <li class="seperator"></li>
-                                <li><a href="">
-                                    <span class="icon"><i class="fa fa-fw m-r-10 fa-sign-out"></i></span>
-                                    Logout</a></li>
-                            </ul>
-                        </button>
-                    @endif
-                </div>
-            </div>
-        </nav>
-
         <main class="py-4">
             @yield('content')
         </main>
     </div>
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
+    @yield('scripts')
 </body>
 </html>

@@ -4,7 +4,7 @@
 
 <div class="columns">
     <div class="column is-one-third is-offset-one-third m-t-100">
-        <div class="card">
+        <div class="card round-edges">
             <div class="card-content">
                 <h1 class="title">Log in</h1>
                 <form action="{{route('login')}}" method="POST" role="form">
@@ -30,7 +30,7 @@
     
                     <b-checkbox name="remember" class="m-t-20">Remember Me</b-checkbox>
     
-                    <button class="button is-primary is-outlined is-fullwidth m-t-30">Log in</button>
+                    <button class="button is-success is-outlined is-fullwidth m-t-30">Log in</button>
                 </form>
             </div>
         </div>

@@ -3467,7 +3467,7 @@ th:not([align]) {
 }
 
 html {
-  background-color: white;
+  background-color: whitesmoke;
   font-size: 16px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -19457,7 +19457,7 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
 
 .b-steps .steps.has-label-right .step-items .step-item .step-link > .step-details,
 .b-steps .steps.has-label-left .step-items .step-item .step-link > .step-details {
-  background-color: white;
+  background-color: whitesmoke;
   padding: 0.2em;
 }
 
@@ -19877,7 +19877,7 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
 }
 
 .b-steps.is-vertical > .steps:not(.has-label-right):not(.has-label-left) .step-items .step-item .step-link > .step-details {
-  background-color: white;
+  background-color: whitesmoke;
 }
 
 .b-steps.is-vertical > .step-content {
@@ -21984,6 +21984,10 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
 
 a.is-muted:hover {
   color: #7a7a7a !important;
+}
+
+.round-edges {
+  border-radius: 10px;
 }
 
 .dropdown {

@@ -11,7 +11,7 @@
 <div class="columns">
     <div class="column is-one-third is-offset-one-third m-t-100">
         <div class="card">
-            <div class="card-content">
+            <div class="card-content round-edges">
                 <h1 class="title">Reset Your Password</h1>
                 <form action="{{route('password.request')}}" method="POST" role="form">
                     {{csrf_field()}}
@@ -44,7 +44,7 @@
                                     <input type="text" class="input {{$errors->has('password_confirmation') ? 'is-danger' : ''}}" name="password" id="password_confirmation" required>
                                 </p>
                                 @if ($errors->has('password_confirmation'))
-                                    <p class="help is-danger">{{$errors->first('password_confirmation')}}</p>
+                                    <p class="help is-success">{{$errors->first('password_confirmation')}}</p>
                                 @endif
                             </div>
                         </div>

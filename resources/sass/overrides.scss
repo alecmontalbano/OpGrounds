@@ -6,6 +6,10 @@ a.is-muted:hover {
     color: $grey !important;
 }
 
+.round-edges {
+    border-radius: 10px;
+}
+
 .dropdown {
     position: relative;
 
