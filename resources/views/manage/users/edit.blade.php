@@ -42,7 +42,7 @@
                         </div>
                     </div>
 
-                    <button class="button is-primary">Edit User</button>
+                    <button class="button is-primary">Save</button>
                 </form>
             </div>
         </div>
