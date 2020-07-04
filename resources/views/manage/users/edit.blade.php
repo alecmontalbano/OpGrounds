@@ -9,9 +9,9 @@
         </div>
         <hr class="m-t-0">
 
-        <div class="columns">
-            <div class="column">
-                <form action="{{route('users.update', $user->id)}}" method="POST">
+        <form action="{{route('users.update', $user->id)}}" method="POST">
+            <div class="columns">
+                <div class="column">
                     {{method_field('PUT')}}
                     {{csrf_field()}}
                     <div class="field">
@@ -41,12 +41,27 @@
                             </p>     
                         </div>
                     </div>
+                </div>
 
-                    <button class="button is-primary">Save</button>
-                </form>
+                <div class="column">
+                    <label for="roles">Roles:</label>
+                    <input type="hidden" name="roles" :value="rolesSelected">
+
+                    @foreach ($roles as $role)
+                        <div class="field">
+                            <b-checkbox v-model="rolesSelected" native-value="{{$role->id}}">{{$role->display_name}}</b-checkbox>
+                        </div>
+                    @endforeach
+                </div>
             </div>
-        </div>
-
+            <div class="columns">
+                <div class="column">
+                    <hr />
+                    <button class="button is-primary">Save</button>
+                </div>
+            </div>
+            
+        </form>
     </div>
 @endsection
 
@@ -55,7 +70,8 @@
         var app = new Vue({
             el: '#app',
             data: {
-                password_options: 'keep'
+                password_options: 'keep',
+                rolesSelected: {!! $user->roles->pluck('id') !!}
             }
         });    
     </script>    
