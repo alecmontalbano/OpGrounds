@@ -12,6 +12,8 @@ import Buefy from 'buefy';
 
 Vue.use(Buefy);
 
+require('./manage');
+
 // var app = new Vue({
 //     el: '#app',
 //     data: {}
