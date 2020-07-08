@@ -38,7 +38,7 @@ class PermissionController extends Controller
     public function store(Request $request)
     {
         if ($request->permission_type == 'basic') {
-            $this->validate($request, [
+            $this->validateWith([
                 'display_name' => 'required|max:255',
                 'name' => 'required|max:255|alphadash|unique:permissions,name',
                 'description' => 'sometimes|max:255'
@@ -53,7 +53,7 @@ class PermissionController extends Controller
             Session::flash('success', 'Permission has been successfully added');
             return redirect()->route('permissions.index');
         } elseif ($request->permission_type == 'crud') {
-            $this->validate($request, [
+            $this->validateWith([
                 'resource' => 'required|min:3|max:100|alpha'
             ]);
 
@@ -112,7 +112,7 @@ class PermissionController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->validate($request, [
+        $this->validateWith([
             'display_name' => 'required|max:255',
             'description' => 'sometimes|max:255'
         ]);
