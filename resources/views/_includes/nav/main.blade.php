@@ -1,14 +1,21 @@
 <nav class="navbar has-shadow">
     <div class="container">
         <div class="navbar-brand">
-            <a class="navbar-item is-paddingless" href="{{route('home')}}">
+            <a class="navbar-item is-paddingless m-r-15" href="{{route('home')}}">
                 <img src="{{asset('images/Cube_NH.png')}}" alt="OpGrounds Logo">
             </a>
-            <a class="nav-burger" role="button" aria-label="menu" aria-expanded="false">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </a>    
+
+            @if (Request::segment(1) == "manage")                
+                <a class="navbar-item is-hidden-desktop" id="admin-slideout-button">
+                    <span class="icon"><i class="fa fa-arrow-circle-o-right"></i></span>
+                </a>
+            @endif
+
+            <button class="button navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>    
         </div>
         <div class="navbar-menu">
             <div class="navbar-start">

@@ -13,3 +13,14 @@ a.is-muted:hover {
 .navbar-item img {
     max-height: 3.8rem;
 }
+
+.navbar-brand .brand-item {
+    margin-right: 0px;
+    @include desktop {
+        margin-right: 15px;
+    }
+}
+
+.navbar-burger {
+    border: none;
+}
