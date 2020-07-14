@@ -21986,6 +21986,10 @@ a.is-muted:hover {
   color: #7a7a7a !important;
 }
 
+.no-padding {
+  padding: 0px !important;
+}
+
 .round-edges {
   border-radius: 10px;
 }
@@ -22004,8 +22008,36 @@ a.is-muted:hover {
   }
 }
 
-.navbar-burger {
-  border: none;
+.m-t-0 {
+  margin-top: 0px !important;
+}
+
+.p-t-0 {
+  padding-top: 0px !important;
+}
+
+.m-b-0 {
+  margin-bottom: 0px !important;
+}
+
+.p-b-0 {
+  padding-bottom: 0px !important;
+}
+
+.m-l-0 {
+  margin-left: 0px !important;
+}
+
+.p-l-0 {
+  padding-left: 0px !important;
+}
+
+.m-r-0 {
+  margin-right: 0px !important;
+}
+
+.p-r-0 {
+  padding-right: 0px !important;
 }
 
 .m-t-5 {
@@ -22448,5 +22480,83 @@ a.is-muted:hover {
 .menu-list li ul {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.navbar-burger {
+  border: none;
+}
+
+.title.is-admin {
+  font-weight: 300;
+}
+
+.widget-area {
+  min-height: 75px;
+  padding: 10px;
+  border-bottom: 1px solid rgba(10, 10, 10, 0.1);
+}
+
+.widget-area.author-widget .selected-author {
+  display: flex;
+  align-content: flex-start;
+}
+
+.widget-area.author-widget .selected-author img {
+  float: left;
+  border-radius: 25px;
+}
+
+.widget-area.author-widget .selected-author .author {
+  margin: auto 0 auto 10px;
+}
+
+.widget-area.author-widget .selected-author .author .subtitle {
+  font-weight: 300;
+  font-size: 0.8em;
+}
+
+.widget-area.post-status-widget .status {
+  display: flex;
+  align-content: flex-start;
+}
+
+.widget-area.post-status-widget .status .status-icon {
+  min-width: 50px;
+}
+
+.widget-area.post-status-widget .status .status-icon .icon {
+  width: 100%;
+}
+
+.widget-area.post-status-widget .status .status-icon .icon i {
+  text-align: center;
+}
+
+.widget-area.post-status-widget .status .status-details {
+  margin-left: 10px;
+}
+
+.widget-area.post-status-widget .status .status-details h4 {
+  font-weight: 400;
+}
+
+.widget-area.post-status-widget .status .status-details h4 span.status-emphasis {
+  font-weight: 800;
+}
+
+.widget-area.post-status-widget .status .status-details p {
+  font-weight: 300;
+  font-size: 0.8em;
+}
+
+.widget-area.publish-buttons-widget {
+  display: flex;
+  min-height: 50px;
+}
+
+.widget-area.publish-buttons-widget .primary-action-button,
+.widget-area.publish-buttons-widget .secondary-action-button {
+  flex: 1;
+  margin: 0 5px;
 }
 

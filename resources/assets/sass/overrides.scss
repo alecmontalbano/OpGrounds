@@ -6,6 +6,10 @@ a.is-muted:hover {
     color: $grey !important;
 }
 
+.no-padding {
+    padding: 0px !important;
+}
+
 .round-edges {
     border-radius: 10px;
 }
@@ -19,8 +23,4 @@ a.is-muted:hover {
     @include desktop {
         margin-right: 15px;
     }
-}
-
-.navbar-burger {
-    border: none;
 }
