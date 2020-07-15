@@ -41,3 +41,11 @@
 </div>
 
 @endsection
+
+@section('scripts')
+    <script>
+        var app = Vue({
+            el: '#app'
+        })
+    </script>
+@endsection

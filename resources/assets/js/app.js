@@ -4,15 +4,20 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap');
+require('./bootstrap')
 
-window.Vue = require('vue');
+window.Vue = require('vue')
+window.Slug = require('slug')
 
-import Buefy from 'buefy';
+Slug.defaults.mode = "rfc3986"
+
+import Buefy from 'buefy'
 
 Vue.use(Buefy);
 
-require('./manage');
+Vue.component('slug-widget', require('./components/SlugWidget.vue').default)
+
+require('./manage')
 
 // var app = new Vue({
 //     el: '#app',
