@@ -12,12 +12,12 @@
         <form action="{{route('posts.store')}}" method="POST">
             {{ csrf_field() }}
             <div class="columns">
-                <div class="column is-three-quarters-desktop">
+                <div class="column is-three-quarters-desktop is-three-quarters-tablet">
                     <b-field>
                         <b-input placeholder="Post Title" size="is-large" v-model="title">
                         </b-input>
                     </b-field>
-                <slug-widget url="{{url('/')}}" subdirectory="blog" :title="title" @slug-changed="updateSlug"></slug-widget>
+                    <slug-widget url="{{url('/')}}" subdirectory="blog" :title="title" @copied="slugCopied" @slug-changed="updateSlug"></slug-widget>
                     <b-field class="m-t-40">
                         <b-input type="textarea" placeholder="Compose your post..." rows="30"></b-input>
                     </b-field>
@@ -78,6 +78,9 @@
             methods: {
                 updateSlug: function(val) {
                     this.slug = val
+                },
+                slugCopied: function(type, msg, val) {
+                    notifications.toast(msg, {type: `is-${type}`})
                 }
             }
         })

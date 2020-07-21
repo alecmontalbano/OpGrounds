@@ -24,3 +24,9 @@ a.is-muted:hover {
         margin-right: 15px;
     }
 }
+
+.truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
